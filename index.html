@@ -56,6 +56,11 @@
             border-color: #004d40;
         }
 
+        option:hover {
+            background-color: #b2dfdb;
+            color: #004d40;
+        }
+
         button {
             padding: 15px 20px;
             background-color: #00796b;
@@ -116,39 +121,88 @@
     </style>
 </head>
 <body>
-    <h1>College Indoor Navigation System</h1>
+    <h1>G-Block Information Technology Block Navigation System</h1>
     <div class="search-container">
         <select id="destination">
             <option value="">Select your destination</option>
-            <option value="library">Library</option>
-            <option value="cse">Computer Science Engineering (CSE)</option>
-            <option value="it">Information Technology (IT)</option>
-            <option value="ece">Electronics and Communication Engineering (ECE)</option>
-            <option value="eee">Electrical and Electronics Engineering (EEE)</option>
-            <option value="mech">Mechanical Engineering (MECH)</option>
+            <optgroup label="Ground Floor">
+                <option value="Ground Floor">Ground Floor</option>
+                <option value="Mechanical Workshop">Mechanical Workshop</option>
+                <option value="Mechanical FM&HM Workshop">Mechanical FM&HM Workshop</option>
+                <option value="Drinking Water">Drinking Water</option>
+                <option value="Thermal Lab">Thermal Lab</option>
+                <option value="English Lab">English Lab</option>
+            </optgroup>
+            <optgroup label="First Floor">
+                <option value="First Floor">First Floor</option>
+                <option value="Room No 201 Center for Communication Skills 1">Room No 201 Center for Communication Skills 1</option>
+                <option value="Room No 202 Language Hub">Room No 202  Language Hub </option>
+                <option value="Room No 203,204 Environmental lab& Organic lab">Room No 203,204 Environmental lab& Organic lab</option>
+                <option value="Room No 205 Staff Room">Room No 205 Staff Room</option>
+                <option value="Room No 206,207 Engineering Chemistry Lab 1">Room No 206,207 Engineering Chemistry Lab 1</option>
+                <option value="Room No 208 Engineering Chemistry Lab 2">Room No 208 Engineering Chemistry Lab 2</option>
+                
+            </optgroup>
+            <optgroup label="Second Floor">
+                <option value="Second Floor">Second Floor</option>
+                <option value="Room No 301 Application software Lab 2">Room No 301 Application software Lab 2</option>
+                <option value="Room No 302 Application software Lab 1">Room No 302 Application software Lab 1</option>
+                <option value="Room No 303,304 Core Programming Lab ">Room No  303,304 Core Programming Lab</option>
+                <option value="Room No 305 A Department Office ">Room No 305 A Department Office  </option>
+                <option value="Room No 305 B HOD Cabin ">Room No 305 B HOD Cabin </option>
+                <option value="Room No 306 Class Room">Room No  306 Class Room </option>
+                <option value="Room No 307 Staff Room">Room No 307 Staff Room </option>
+                <option value="Room No 308 Staff Room">Room No 308 Staff Room </option>
+                <option value="Room No 309 Class Room">Room No  309 Class Room </option>
+                <option value="Room No 310 Class Room">Room No  310 Class Room </option>
+                <option value="Room No 311 Ladies Waiting Room">Room No 311 Ladies Waiting Room   </option>
+                
+            </optgroup>
+            <optgroup label="Third Floor">
+                <option value="Third Floor">Third Floor</option>
+                <option value="Room No 401 Class Room">Room No 401 Class Room</option>
+                <option value="Room No 402 Class Room">Room No 402 Class Room</option>
+                <option value="Room No 403 Staff Room">Room No 403 Staff Room</option>
+                <option value="Room No 404 Staff Room">Room No 404 Staff Room</option>
+                <option value="Room No 405 Center of Communication Skills-2">Room No 405 Center of Communication Skills-2</option>
+                <option value="Room No 406 Department Library ">Room No 406 Department Library</option>
+                <option value="Room No 407 CO & IOT Lab">Room No 407 CO & IOT Lab</option>
+                <option value="Room No 408 Staff Room">Room No 408 Staff Room</option>
+                <option value="Room No 409 Class Room">Room No 409 Class Room</option>
+                <option value="Drinking Water">Drinking Water</option>
+
+            </optgroup>
+            <optgroup label="Fourth Floor">
+                <option value="Fourth Floor">Fourth Floor</option>
+                <option value="Room No 502 Sales-Force Lab">Room No 502 Sales-Force Lab</option>
+                <option value="Room No 503 NS Lab">Room No 503 NS Lab</option>
+                <option value="Room No 504 Staff Room">Room No 504 Staff Room</option>
+                <option value="Room No 505 Staff Room">Room No 505 Staff Room</option>
+                <option value="Room No 506 Staff Room">Room No 506 Staff Room</option>
+                <option value="Room No 507 Class Room">Room No 507 CLass Room</option>
+                <option value="Room No 508 Exam Section">Room No 508 Exam Section</option>
+                <option value="Room No 509 Staff Room">Room No 509 Staff Room</option>
+                <option value="Room No 510 Class Room">Room No 510 Class Room</option>
+                <option value="Room No 511 Class Room">Room No 511 Class Room</option>
+                
+            </optgroup>
         </select>
-        <button onclick="navigate()">Go</button>
     </div>
+    <button onclick="navigate()">Go</button>
 
     <div class="info">
         <p>Select a destination from the dropdown menu and click "Go" to navigate.</p>
     </div>
 
     <div class="icon-container">
-        <div class="icon"><i class="fas fa-book"></i><br>Library</div>
-        <div class="icon"><i class="fas fa-laptop-code"></i><br>CSE</div>
-        <div class="icon"><i class="fas fa-desktop"></i><br>IT</div>
-        <div class="icon"><i class="fas fa-circuit-board"></i><br>ECE</div>
-        <div class="icon"><i class="fas fa-bolt"></i><br>EEE</div>
-        <div class="icon"><i class="fas fa-cogs"></i><br>MECH</div>
+         <div class="icon"><i class="fas fa-book"></i><br>IT</div>
     </div>
 
-    <script>
+    <script> 
         function navigate() {
             const destination = document.getElementById('destination').value;
             if (destination) {
-                alert(Navigating to ${destination});
-                // Here you can add code to move to the selected location
+                alert(`Navigating to ${destination}`);
             } else {
                 alert('Please select a destination.');
             }
